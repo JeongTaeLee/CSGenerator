@@ -37,11 +37,6 @@ namespace CSGenerator
                 throw new ArgumentNullException(nameof(name));
             }
 
-            if (_methodCodes.Any(cls => cls.name == name))
-            {
-                throw new InvalidOperationException($"Method already added: ClassName({name})");
-            }
-
             var mthdCode = new MethodCode(this, name);
             _methodCodes.Add(mthdCode);
 

@@ -57,7 +57,7 @@ namespace CSGenerator
 
             if (_parameters.Any(prmtr => prmtr.parameterName ==  parameterName))
             {
-                throw new InvalidOperationException($"Method already added : MethodName{parameterName}");
+                throw new InvalidOperationException($"Parameter already added : ParameterName{parameterName}");
             }
 
             _parameters.Add(new ParameterInfo(parameterName, returnType));
